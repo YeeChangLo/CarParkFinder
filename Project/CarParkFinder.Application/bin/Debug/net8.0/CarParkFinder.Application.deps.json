@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "CarParkFinder.Application/1.0.0": {
+        "dependencies": {
+          "CarParkFinder.Domain": "1.0.0"
+        },
+        "runtime": {
+          "CarParkFinder.Application.dll": {}
+        }
+      },
+      "CarParkFinder.Domain/1.0.0": {
+        "runtime": {
+          "CarParkFinder.Domain.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CarParkFinder.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarParkFinder.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
