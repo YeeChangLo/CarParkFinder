@@ -5,16 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|d:\\lyc\\project\\project\\carparkfinder\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D128EDA-700A-4273-BF65-AEF6B017E0ED}|..\\CarParkFinder.Infrastructure\\CarParkFinder.Infrastructure.csproj|d:\\lyc\\project\\project\\carparkfinder.infrastructure\\services\\csvimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|d:\\lyc\\project\\project\\carparkfinder\\controllers\\carparkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|solutionrelative:controllers\\carparkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D128EDA-700A-4273-BF65-AEF6B017E0ED}|..\\CarParkFinder.Infrastructure\\CarParkFinder.Infrastructure.csproj|d:\\lyc\\project\\project\\carparkfinder.infrastructure\\services\\carparkbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -24,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -40,52 +30,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CarParkBackgroundService.cs",
-              "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder.Infrastructure\\Services\\CarParkBackgroundService.cs",
-              "RelativeDocumentMoniker": "..\\CarParkFinder.Infrastructure\\Services\\CarParkBackgroundService.cs",
-              "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder.Infrastructure\\Services\\CarParkBackgroundService.cs",
-              "RelativeToolTip": "..\\CarParkFinder.Infrastructure\\Services\\CarParkBackgroundService.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T15:44:42.828Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CarParkController.cs",
-              "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder\\Controllers\\CarParkController.cs",
-              "RelativeDocumentMoniker": "Controllers\\CarParkController.cs",
-              "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder\\Controllers\\CarParkController.cs",
-              "RelativeToolTip": "Controllers\\CarParkController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T15:31:49.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CsvImporter.cs",
-              "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder.Infrastructure\\Services\\CsvImporter.cs",
-              "RelativeDocumentMoniker": "..\\CarParkFinder.Infrastructure\\Services\\CsvImporter.cs",
-              "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder.Infrastructure\\Services\\CsvImporter.cs",
-              "RelativeToolTip": "..\\CarParkFinder.Infrastructure\\Services\\CsvImporter.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAIwB0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-15T15:27:19.996Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-15T15:26:30.97Z",
               "EditorCaption": ""

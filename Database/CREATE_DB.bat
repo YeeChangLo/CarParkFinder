@@ -6,17 +6,30 @@ set SERVER_NAME=localhost
 set DATABASE_NAME=db
 set USERNAME=sa
 set PASSWORD=1
-set SCRIPT_FILE=Tables\CARPARKS.Table.sql
 
-:: Run the SQL script
-echo Running %SCRIPT_FILE%...
-sqlcmd -S %SERVER_NAME% -d %DATABASE_NAME% -U %USERNAME% -P %PASSWORD% -i "%CD%\%SCRIPT_FILE%"
+:: List all .sql files in the Table folder
+::echo Listing all SQL files in Table folder:
+::for %%f in (Table\*.sql) do (
+::    echo Found: %%f
+::)
 
-if %ERRORLEVEL% NEQ 0 (
-    echo ERROR: Execution failed for %SCRIPT_FILE%
-    exit /b %ERRORLEVEL%
+echo Start
+echo.
+
+:: Loop through all .sql files in the Table folder and run them
+for %%f in (Table\*.sql) do (
+    echo Running %%f...
+    sqlcmd -S %SERVER_NAME% -d %DATABASE_NAME% -U %USERNAME% -P %PASSWORD% -i "%%f"
+    
+    if %ERRORLEVEL% NEQ 0 (
+        echo ERROR: Execution failed for %%f
+        exit /b %ERRORLEVEL%
+    )
 )
 
-echo SQL script executed successfully!
+echo.
+echo All SQL scripts executed successfully!
+echo.
+echo End...
 endlocal
 pause
