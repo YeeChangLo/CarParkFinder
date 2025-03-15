@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K9/91YDG3O0=",
+  "dgSpecHash": "+GHJ+C0EwO4=",
   "success": true,
-  "projectFilePath": "D:\\LYC\\CarPark\\Project\\CarParkFinder.Tests\\CarParkFinder.Tests.csproj",
+  "projectFilePath": "D:\\LYC\\Project\\Project\\CarParkFinder.Tests\\CarParkFinder.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LYC\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
@@ -24,6 +24,9 @@
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\9.0.3\\microsoft.extensions.configuration.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\9.0.3\\microsoft.extensions.dependencyinjection.9.0.3.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.3\\microsoft.extensions.dependencyinjection.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\9.0.3\\microsoft.extensions.diagnostics.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\9.0.3\\microsoft.extensions.fileproviders.abstractions.9.0.3.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\9.0.3\\microsoft.extensions.hosting.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.logging\\9.0.3\\microsoft.extensions.logging.9.0.3.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\9.0.3\\microsoft.extensions.logging.abstractions.9.0.3.nupkg.sha512",
     "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.options\\9.0.3\\microsoft.extensions.options.9.0.3.nupkg.sha512",

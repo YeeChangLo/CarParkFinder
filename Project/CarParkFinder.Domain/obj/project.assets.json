@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\LYC\\CarPark\\Project\\CarParkFinder.Domain\\CarParkFinder.Domain.csproj",
+      "projectUniqueName": "D:\\LYC\\Project\\Project\\CarParkFinder.Domain\\CarParkFinder.Domain.csproj",
       "projectName": "CarParkFinder.Domain",
-      "projectPath": "D:\\LYC\\CarPark\\Project\\CarParkFinder.Domain\\CarParkFinder.Domain.csproj",
+      "projectPath": "D:\\LYC\\Project\\Project\\CarParkFinder.Domain\\CarParkFinder.Domain.csproj",
       "packagesPath": "C:\\Users\\LYC\\.nuget\\packages\\",
-      "outputPath": "D:\\LYC\\CarPark\\Project\\CarParkFinder.Domain\\obj\\",
+      "outputPath": "D:\\LYC\\Project\\Project\\CarParkFinder.Domain\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

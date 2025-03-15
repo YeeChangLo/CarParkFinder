@@ -82,79 +82,60 @@
         }
       }
     },
-    "/api/CarParkAvailability": {
+    "/api/CarPark/nearest": {
       "get": {
         "tags": [
-          "CarParkAvailability"
+          "CarPark"
+        ],
+        "parameters": [
+          {
+            "name": "latitude",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "longitude",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          },
+          {
+            "name": "per_page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 10
+            }
+          }
         ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/JToken"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/JToken"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "object",
-                  "additionalProperties": {
-                    "$ref": "#/components/schemas/JToken"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
     },
-    "/WeatherForecast": {
-      "get": {
+    "/api/CarPark/update-availability": {
+      "post": {
         "tags": [
-          "WeatherForecast"
+          "CarPark"
         ],
-        "operationId": "GetWeatherForecast",
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/WeatherForecast"
-                  }
-                }
-              }
-            }
+            "description": "OK"
           }
         }
       }
@@ -226,35 +207,53 @@
           "car_park_basement": {
             "type": "string",
             "nullable": true
+          },
+          "carParkAvailability": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/CarParkAvailability"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "JToken": {
-        "type": "array",
-        "items": {
-          "$ref": "#/components/schemas/JToken"
-        }
-      },
-      "WeatherForecast": {
+      "CarParkAvailability": {
+        "required": [
+          "car_park_no",
+          "lot_type",
+          "lots_available",
+          "total_lots",
+          "update_at"
+        ],
         "type": "object",
         "properties": {
-          "date": {
-            "type": "string",
-            "format": "date"
-          },
-          "temperatureC": {
+          "id": {
             "type": "integer",
             "format": "int32"
           },
-          "temperatureF": {
-            "type": "integer",
-            "format": "int32",
-            "readOnly": true
-          },
-          "summary": {
+          "car_park_no": {
             "type": "string",
             "nullable": true
+          },
+          "lot_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "total_lots": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "lots_available": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "update_at": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "carPark": {
+            "$ref": "#/components/schemas/CarPark"
           }
         },
         "additionalProperties": false

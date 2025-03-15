@@ -1,21 +1,23 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json.Linq;
 
-[Route("api/[controller]")]
-[ApiController]
-public class CarParkAvailabilityController : ControllerBase
+namespace CarParkFinder.API.Controllers
 {
-    private readonly CarParkAvailabilityService _availabilityService;
-
-    public CarParkAvailabilityController(CarParkAvailabilityService availabilityService)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class CarParkController : ControllerBase
     {
-        _availabilityService = availabilityService;
-    }
+        private readonly CarParkAvailabilityService _carParkService;
 
-    [HttpGet]
-    public async Task<ActionResult<JObject>> GetCarParkAvailability()
-    {
-        var availabilityData = await _availabilityService.GetCarParkAvailabilityAsync();
-        return Ok(availabilityData);
+        public CarParkController(CarParkAvailabilityService carParkService)
+        {
+            _carParkService = carParkService;
+        }
+
+        [HttpPost("update-availability")]
+        public async Task<IActionResult> UpdateAvailability()
+        {
+            await _carParkService.FetchAndSaveCarParkAvailability();
+            return Ok("Car park availability updated.");
+        }
     }
 }
