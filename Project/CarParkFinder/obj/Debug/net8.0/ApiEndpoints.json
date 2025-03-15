@@ -46,44 +46,44 @@
     ]
   },
   {
-    "ContainingType": "CarParkAvailabilityController",
-    "Method": "GetCarParkAvailability",
-    "RelativePath": "api/CarParkAvailability",
+    "ContainingType": "CarParkController",
+    "Method": "GetNearestCarParks",
+    "RelativePath": "api/CarPark/nearest",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+    "Parameters": [
       {
-        "Type": "Newtonsoft.Json.Linq.JObject",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
-      }
-    ]
-  },
-  {
-    "ContainingType": "CarParkFinder.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": [
+        "Name": "latitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CarParkFinder.WeatherForecast, CarParkFinder, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "MediaTypes": [
-          "text/plain",
-          "application/json",
-          "text/json"
-        ],
-        "StatusCode": 200
+        "Name": "longitude",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "page",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "per_page",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
-    "EndpointName": "GetWeatherForecast"
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkFinder.API.Controllers.CarParkController",
+    "Method": "UpdateAvailability",
+    "RelativePath": "api/CarPark/update-availability",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
   }
 ]

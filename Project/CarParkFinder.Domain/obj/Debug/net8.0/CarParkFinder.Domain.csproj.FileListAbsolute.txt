@@ -20,3 +20,15 @@ D:\LYC\CarPark\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domai
 D:\LYC\CarPark\Project\CarParkFinder.Domain\obj\Debug\net8.0\refint\CarParkFinder.Domain.dll
 D:\LYC\CarPark\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.pdb
 D:\LYC\CarPark\Project\CarParkFinder.Domain\obj\Debug\net8.0\ref\CarParkFinder.Domain.dll
+D:\LYC\Project\Project\CarParkFinder.Domain\bin\Debug\net8.0\CarParkFinder.Domain.deps.json
+D:\LYC\Project\Project\CarParkFinder.Domain\bin\Debug\net8.0\CarParkFinder.Domain.dll
+D:\LYC\Project\Project\CarParkFinder.Domain\bin\Debug\net8.0\CarParkFinder.Domain.pdb
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.AssemblyInfoInputs.cache
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.AssemblyInfo.cs
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.csproj.CoreCompileInputs.cache
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.sourcelink.json
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.dll
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\refint\CarParkFinder.Domain.dll
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\CarParkFinder.Domain.pdb
+D:\LYC\Project\Project\CarParkFinder.Domain\obj\Debug\net8.0\ref\CarParkFinder.Domain.dll
