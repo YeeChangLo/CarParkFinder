@@ -20,7 +20,7 @@ public class CarParkController : ControllerBase
         _logger = logger;
     }
 
-    // GET: api/CarPark
+    // GET: api/CarParks
     [HttpGet]
     public async Task<ActionResult<IEnumerable<CarPark>>> GetCarParks()
     {
@@ -28,7 +28,7 @@ public class CarParkController : ControllerBase
     }
 
     // GET: api/CarPark/{car_park_no}
-    [HttpGet("{car_park_no}")]  // This should match the parameter name
+    [HttpGet("{car_park_no}")] 
     public async Task<ActionResult<CarPark>> GetCarPark(string car_park_no)
     {
         var carPark = await _context.CarParks.FindAsync(car_park_no);
@@ -39,6 +39,7 @@ public class CarParkController : ControllerBase
         return carPark;
     }
 
+    // GET: api/CarPark/{car_park_no}
     [HttpGet("nearest")]
     public async Task<IActionResult> GetNearestCarParks([FromQuery] string latitude, [FromQuery] string longitude
                                             , [FromQuery] int page = 1, [FromQuery] int per_page = 10)
@@ -94,7 +95,7 @@ public class CarParkController : ControllerBase
                         longitude = conv_long,
                         total_lots = cp.total_lots,
                         available_lots = cp.lots_available,
-                        Distance = DistanceHelper.CalculateDistance(lat, lon, conv_lat, conv_long, true)
+                        Distance = DistanceHelper.CalculateDistance(lat, lon, conv_lat, conv_long, true),
                     };
                 })
                 .OrderBy(cp => cp.Distance)

@@ -20,6 +20,14 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 });
 
 
+// Get the correct project directory example...(D:\LYC\Project)
+var baseDirectory = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName;
+var filePath = Path.Combine(baseDirectory, "ProjectData", "HDBCarparkInformation.csv");
+//Insert data with Csv Importer...Change the pathe here
+await new CsvImporter(builder.Configuration.GetConnectionString("CarParkDb"))
+    .ImportCarParkDataAsync(filePath);
+
+
 // Register HttpClient and Services
 builder.Services.AddHttpClient<CarParkAvailabilityService>();
 builder.Services.AddScoped<CarParkAvailabilityService>();
@@ -35,11 +43,6 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-//Insert data with Csv Importer
-//await new CsvImporter(builder.Configuration.GetConnectionString("CarParkDb"))
-//    .ImportCarParkDataAsync("D:\\LYC\\Project\\ProjectData\\HDBCarparkInformation.csv");
-
 
 
 app.UseHttpsRedirection();
