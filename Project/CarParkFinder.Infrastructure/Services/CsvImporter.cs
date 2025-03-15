@@ -4,8 +4,10 @@ using CsvHelper.Configuration;
 using System.Globalization;
 using CarParkFinder.Domain.Entities;
 using Microsoft.Data.SqlClient;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
+using CarParkFinder.Infrastructure.Persistence;
+using Microsoft.Extensions.Logging;
+using System.Net.Http;
 
 public class CsvImporter
 {
@@ -16,12 +18,29 @@ public class CsvImporter
         _connectionString = connectionString;
     }
 
+    public async Task<bool> IsCarParkDataExistAsync()
+    {
+        using var connection = new SqlConnection(_connectionString);
+        await connection.OpenAsync();
+
+        var command = new SqlCommand("SELECT COUNT(*) FROM CarParks WITH(NOLOCK)", connection);
+        var count = (int)await command.ExecuteScalarAsync();
+
+        return count > 0;
+    }
+
     public async Task ImportCarParkDataAsync(string filePath)
     {
+        if (await IsCarParkDataExistAsync())
+        {
+            Console.WriteLine("Car park data already exists in the database.");
+            return;
+        }
+
         using var reader = new StreamReader(filePath);
         using var csv = new CsvReader(reader, new CsvConfiguration(CultureInfo.InvariantCulture));
 
-        var records = csv.GetRecords<CarPark>().ToList(); // Convert CSV to List<CarPark>
+        var records = csv.GetRecords<CarPark>().ToList();
 
         using var connection = new SqlConnection(_connectionString);
         await connection.OpenAsync();
@@ -29,7 +48,7 @@ public class CsvImporter
         using var bulkCopy = new SqlBulkCopy(connection)
         {
             DestinationTableName = "CarParks",
-            BatchSize = 5000,  // Optimized batch size
+            BatchSize = 5000,
             BulkCopyTimeout = 60
         };
 

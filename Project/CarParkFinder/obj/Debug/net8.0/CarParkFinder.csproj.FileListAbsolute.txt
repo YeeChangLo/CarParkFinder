@@ -379,6 +379,7 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.pdb
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Azure.Core.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Azure.Identity.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Castle.Core.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CsvHelper.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Humanizer.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
@@ -394,6 +395,7 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Data.SqlClient.d
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.InMemory.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
@@ -407,6 +409,7 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.FileP
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.Identity.Client.dll
@@ -420,6 +423,7 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.IdentityModel.To
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.OpenApi.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Moq.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Newtonsoft.Json.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Swashbuckle.AspNetCore.Swagger.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -442,6 +446,10 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\System.Security.Cryptograp
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\System.Text.Encodings.Web.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\System.Text.Json.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\xunit.abstractions.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\xunit.assert.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\xunit.core.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\xunit.execution.dotnet.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
