@@ -8,17 +8,17 @@ namespace CarParkFinder.Domain.Entities
     {
         [Key]
         public required string car_park_no { get; set; }
-        public required string address { get; set; }
-        public required string x_coord { get; set; }
-        public required string y_coord { get; set; }
-        public required string car_park_type { get; set; }
-        public required string type_of_parking_system { get; set; }
-        public required string short_term_parking { get; set; }
-        public required string free_parking { get; set; }
-        public required string night_parking { get; set; }
-        public required string car_park_decks { get; set; }
-        public required string gantry_height { get; set; }
-        public required string car_park_basement { get; set; }
+        public string address { get; set; } = string.Empty;
+        public string x_coord { get; set; } = string.Empty;
+        public string y_coord { get; set; } = string.Empty;
+        public string car_park_type { get; set; } = string.Empty;
+        public string type_of_parking_system { get; set; } = string.Empty;
+        public string short_term_parking { get; set; } = string.Empty;
+        public string free_parking { get; set; } = string.Empty;
+        public string night_parking { get; set; } = string.Empty;
+        public string car_park_decks { get; set; } = string.Empty;
+        public string gantry_height { get; set; } = string.Empty;
+        public string car_park_basement { get; set; } = string.Empty;
 
         // Navigation Property - Relationship to CarParkAvailability
         public ICollection<CarParkAvailability>? CarParkAvailability { get; set; }

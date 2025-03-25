@@ -3,9 +3,8 @@ using Microsoft.EntityFrameworkCore;
 using CarParkFinder.Infrastructure.Persistence;
 using CarParkFinder.Domain.Entities;
 using CarParkFinder.Application.Helpers;
-using System.Net.Http;
-using Azure;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using AutoMapper;
+using CarParkFinder.Domain.DTOs;
 
 [Route("api/[controller]")]
 [ApiController]
@@ -13,38 +12,36 @@ public class CarParkController : ControllerBase
 {
     private readonly AppDbContext _context;
     private readonly ILogger<CarParkController> _logger;
+    private readonly IMapper _mapper;
 
-    public CarParkController(AppDbContext context, ILogger<CarParkController> logger)
+    public CarParkController(AppDbContext context, ILogger<CarParkController> logger, IMapper mapper)
     {
         _context = context;
         _logger = logger;
+        _mapper = mapper;
     }
 
     // GET: api/CarParks
     [HttpGet]
-    public async Task<ActionResult<IEnumerable<CarPark>>> GetCarParks()
+    public async Task<ActionResult<IEnumerable<CarParkDto>>> GetCarParks()
     {
-        return await _context.CarParks.ToListAsync();
+        var carParks = await _context.CarParks.ToListAsync();
+        return Ok(_mapper.Map<IEnumerable<CarParkDto>>(carParks));
     }
 
     // GET: api/CarPark/{car_park_no}
-    [HttpGet("{car_park_no}")] 
+    [HttpGet("{car_park_no}")]
     public async Task<ActionResult<CarPark>> GetCarPark(string car_park_no)
     {
         var carPark = await _context.CarParks.FindAsync(car_park_no);
-        if (carPark == null)
-        {
-            return NotFound();
-        }
-        return carPark;
+        return carPark == null ? NotFound() : Ok(carPark);
     }
 
-    // GET: api/CarPark/{car_park_no}
+    // GET: api/CarPark/nearest?latitude=1.29027&longitude=103.851959&page=1&per_page=10
     [HttpGet("nearest")]
-    public async Task<IActionResult> GetNearestCarParks([FromQuery] string latitude, [FromQuery] string longitude
-                                            , [FromQuery] int page = 1, [FromQuery] int per_page = 10)
+    public async Task<IActionResult> GetNearestCarParks([FromQuery] string latitude, [FromQuery] string longitude,
+                                                         [FromQuery] int page = 1, [FromQuery] int per_page = 10)
     {
-        // Validations
         if (!double.TryParse(latitude, out double lat) || !double.TryParse(longitude, out double lon))
         {
             return BadRequest("Invalid latitude or longitude format.");
@@ -58,34 +55,31 @@ public class CarParkController : ControllerBase
         try
         {
             var query = _context.CarParks
-            .Join(_context.CarParkAvailability,
-                cp => cp.car_park_no,
-                ca => ca.car_park_no,
-                (cp, ca) => new
-                {
-                    cp.car_park_no,
-                    cp.address,
-                    cp.y_coord,
-                    cp.x_coord,
-                    ca.total_lots,
-                    ca.lots_available
-                })
-            .Where(cp => cp.lots_available > 0);
+                .Join(_context.CarParkAvailability,
+                      cp => cp.car_park_no,
+                      ca => ca.car_park_no,
+                      (cp, ca) => new
+                      {
+                          cp.car_park_no,
+                          cp.address,
+                          cp.y_coord,
+                          cp.x_coord,
+                          ca.total_lots,
+                          ca.lots_available
+                      })
+                .Where(cp => cp.lots_available > 0);
 
-            // Total count before pagination
             int total_results = await query.CountAsync();
 
-            // Apply pagination
             var carParksList = await query
-                .Skip((page - 1) * per_page) 
+                .Skip((page - 1) * per_page)
                 .Take(per_page)
                 .ToListAsync();
 
             var carParks = carParksList
-                .AsEnumerable()
                 .Select(cp =>
                 {
-                    // Convert SVY21 to WGS84
+                    // Convert SVY21 to WGS84 (Helper Function)
                     (double conv_lat, double conv_long) = SVY21Converter.ConvertSVY21ToWGS84(double.Parse(cp.y_coord.ToString()), double.Parse(cp.x_coord.ToString()));
 
                     return new CarParkResponseDto
@@ -99,15 +93,9 @@ public class CarParkController : ControllerBase
                     };
                 })
                 .OrderBy(cp => cp.Distance)
-                .ToList(); ;
+                .ToList();
 
-            return Ok(new
-            {
-                page,
-                per_page,
-                total_results,
-                data = carParks
-            });
+            return Ok(new { page, per_page, total_results, data = carParks });
         }
         catch (Exception ex)
         {
@@ -116,5 +104,22 @@ public class CarParkController : ControllerBase
         }
     }
 
+    // POST: api/CarPark
+    [HttpPost]
+    public async Task<ActionResult<CarParkResponseDto>> AddCarpark([FromBody] CarParkDto carParkDto)
+    {
+        if (carParkDto == null)
+            return BadRequest("Invalid car park data.");
 
+        // Use AutoMapper to convert DTO → Entity
+        var carPark = _mapper.Map<CarPark>(carParkDto);
+
+        _context.CarParks.Add(carPark);
+        await _context.SaveChangesAsync();
+
+        // Use AutoMapper to convert Entity → DTO Response
+        var response = _mapper.Map<CarParkResponseDto>(carPark);
+
+        return CreatedAtAction(nameof(GetCarPark), new { car_park_no = carPark.car_park_no }, response);
+    }
 }

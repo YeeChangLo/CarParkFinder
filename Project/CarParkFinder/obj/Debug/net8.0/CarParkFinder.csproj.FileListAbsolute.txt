@@ -369,6 +369,7 @@ D:\LYC\CarPark\Project\CarParkFinder\obj\Debug\net8.0\CarParkFinder.pdb
 D:\LYC\CarPark\Project\CarParkFinder\obj\Debug\net8.0\CarParkFinder.genruntimeconfig.cache
 D:\LYC\CarPark\Project\CarParkFinder\obj\Debug\net8.0\ref\CarParkFinder.dll
 D:\LYC\CarPark\Project\CarParkFinder\bin\Debug\net8.0\Newtonsoft.Json.dll
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CoverletSourceRootsMapping_CarParkFinder
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\appsettings.Development.json
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\appsettings.json
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.staticwebassets.endpoints.json
@@ -377,6 +378,7 @@ D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.deps.json
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.runtimeconfig.json
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\CarParkFinder.pdb
+D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\AutoMapper.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Azure.Core.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Azure.Identity.dll
 D:\LYC\Project\Project\CarParkFinder\bin\Debug\net8.0\Castle.Core.dll

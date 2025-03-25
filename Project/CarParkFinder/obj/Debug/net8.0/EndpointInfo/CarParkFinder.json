@@ -1,5 +1,5 @@
 {
-  "openapi": "3.0.1",
+  "openapi": "3.0.4",
   "info": {
     "title": "CarParkFinder",
     "version": "1.0"
@@ -18,7 +18,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarPark"
+                    "$ref": "#/components/schemas/CarParkDto"
                   }
                 }
               },
@@ -26,7 +26,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarPark"
+                    "$ref": "#/components/schemas/CarParkDto"
                   }
                 }
               },
@@ -34,8 +34,54 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/CarPark"
+                    "$ref": "#/components/schemas/CarParkDto"
                   }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "CarPark"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarParkDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarParkDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CarParkDto"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarParkResponseDto"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarParkResponseDto"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CarParkResponseDto"
                 }
               }
             }
@@ -145,18 +191,7 @@
     "schemas": {
       "CarPark": {
         "required": [
-          "address",
-          "car_park_basement",
-          "car_park_decks",
-          "car_park_no",
-          "car_park_type",
-          "free_parking",
-          "gantry_height",
-          "night_parking",
-          "short_term_parking",
-          "type_of_parking_system",
-          "x_coord",
-          "y_coord"
+          "car_park_no"
         ],
         "type": "object",
         "properties": {
@@ -219,13 +254,6 @@
         "additionalProperties": false
       },
       "CarParkAvailability": {
-        "required": [
-          "car_park_no",
-          "lot_type",
-          "lots_available",
-          "total_lots",
-          "update_at"
-        ],
         "type": "object",
         "properties": {
           "id": {
@@ -254,6 +282,89 @@
           },
           "carPark": {
             "$ref": "#/components/schemas/CarPark"
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarParkDto": {
+        "required": [
+          "car_park_no"
+        ],
+        "type": "object",
+        "properties": {
+          "car_park_no": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "x_coord": {
+            "type": "string",
+            "nullable": true
+          },
+          "y_coord": {
+            "type": "string",
+            "nullable": true
+          },
+          "car_park_type": {
+            "type": "string",
+            "nullable": true
+          },
+          "type_of_parking_system": {
+            "type": "string",
+            "nullable": true
+          },
+          "short_term_parking": {
+            "type": "string",
+            "nullable": true
+          },
+          "free_parking": {
+            "type": "string",
+            "nullable": true
+          },
+          "night_parking": {
+            "type": "string",
+            "nullable": true
+          },
+          "car_park_decks": {
+            "type": "string",
+            "nullable": true
+          },
+          "gantry_height": {
+            "type": "string",
+            "nullable": true
+          },
+          "car_park_basement": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "CarParkResponseDto": {
+        "type": "object",
+        "properties": {
+          "address": {
+            "type": "string",
+            "nullable": true
+          },
+          "latitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "longitude": {
+            "type": "number",
+            "format": "double"
+          },
+          "total_lots": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "available_lots": {
+            "type": "integer",
+            "format": "int32"
           }
         },
         "additionalProperties": false

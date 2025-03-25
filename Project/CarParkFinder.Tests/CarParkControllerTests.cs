@@ -1,21 +1,19 @@
-using Xunit;
 using Moq;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CarParkFinder.Infrastructure.Persistence;
 using CarParkFinder.Domain.Entities;
-using CarParkFinder.Application.Helpers;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Newtonsoft.Json;
+using AutoMapper;
 
 public class CarParkControllerTests
 {
     private readonly CarParkController _controller;
     private readonly AppDbContext _context;
     private readonly Mock<ILogger<CarParkController>> _mockLogger;
+    private readonly IMapper _mapper;
+
 
     public CarParkControllerTests()
     {
@@ -26,7 +24,7 @@ public class CarParkControllerTests
 
         _context = new AppDbContext(options);
         _mockLogger = new Mock<ILogger<CarParkController>>();
-        _controller = new CarParkController(_context, _mockLogger.Object);
+        _controller = new CarParkController(_context, _mockLogger.Object, _mapper);
 
         _context.CarParks.RemoveRange(_context.CarParks);
         _context.CarParkAvailability.RemoveRange(_context.CarParkAvailability);
