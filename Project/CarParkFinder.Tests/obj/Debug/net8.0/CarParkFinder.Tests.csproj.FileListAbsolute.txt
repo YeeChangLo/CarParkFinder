@@ -193,6 +193,7 @@ D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\CarParkFinder.Tests.
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\CarParkFinder.Tests.runtimeconfig.json
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\CarParkFinder.Tests.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\CarParkFinder.Tests.pdb
+D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\AutoMapper.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Azure.Core.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Azure.Identity.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Castle.Core.dll

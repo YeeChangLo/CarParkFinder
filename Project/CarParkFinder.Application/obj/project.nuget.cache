@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "ppD7IYewGAg=",
+  "dgSpecHash": "vxqePA6vCUQ=",
   "success": true,
   "projectFilePath": "D:\\LYC\\Project\\Project\\CarParkFinder.Application\\CarParkFinder.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\LYC\\.nuget\\packages\\automapper\\14.0.0\\automapper.14.0.0.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
+    "C:\\Users\\LYC\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

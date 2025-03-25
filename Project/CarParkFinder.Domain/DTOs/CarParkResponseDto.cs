@@ -5,11 +5,11 @@ using System.Text;
 using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
-namespace CarParkFinder.Domain.Entities
+namespace CarParkFinder.Domain.DTOs
 {
     public class CarParkResponseDto
     {
-        public string address { get; set; }
+        public string address { get; set; } = string.Empty;
         public double latitude { get; set; }
         public double longitude { get; set; }
         public int total_lots { get; set; }

@@ -9,7 +9,33 @@
     "Parameters": [],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[CarParkFinder.Domain.Entities.CarPark, CarParkFinder.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[CarParkFinder.Domain.DTOs.CarParkDto, CarParkFinder.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "AddCarpark",
+    "RelativePath": "api/CarPark",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "carParkDto",
+        "Type": "CarParkFinder.Domain.DTOs.CarParkDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CarParkFinder.Domain.DTOs.CarParkResponseDto",
         "MediaTypes": [
           "text/plain",
           "application/json",
