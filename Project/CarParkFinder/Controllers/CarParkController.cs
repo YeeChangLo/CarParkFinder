@@ -30,7 +30,7 @@ public class CarParkController : ControllerBase
     }
 
     // GET: api/CarPark/{car_park_no}
-    [HttpGet("{car_park_no}")]
+    [HttpGet("car_park_no")]
     public async Task<ActionResult<CarPark>> GetCarPark(string car_park_no)
     {
         var carPark = await _context.CarParks.FindAsync(car_park_no);
@@ -102,6 +102,66 @@ public class CarParkController : ControllerBase
             _logger.LogError($"Error fetching nearest car parks: {ex.Message}");
             return StatusCode(500, "Internal server error");
         }
+    }
+
+    [HttpGet("available")]
+    public async Task<IActionResult> GetAvailableCarparks()
+    {
+        var availableCarParks = await _context.CarParkAvailability
+               .Where(ca => ca.lots_available > 0)
+               .OrderByDescending(ca => ca.lots_available)
+               .ToListAsync();
+        if (!availableCarParks.Any())
+        {
+            return NotFound(new { message = "No available car parks at the moment." });
+        }
+
+        var carParkDtos = _mapper.Map<List<CarParkAvailabilityDto>>(availableCarParks);
+
+        return Ok(carParkDtos);
+    }
+
+    [HttpGet("address")]
+    public async Task<IActionResult> GetCarparkByAddress([FromQuery] string address)
+    {
+        var carPark = await _context.CarParks
+            .Where(ca => EF.Functions.Like(ca.address, $"%{address}%"))
+            .OrderByDescending(ca => ca.address)
+            .ToListAsync();
+
+        if (!carPark.Any())
+        {
+            return NotFound(new { message = "No car parks found for the given address." });
+        }
+
+        var carParkDtos = _mapper.Map<List<CarParkDto>>(carPark);
+
+        return Ok(carParkDtos);
+    }
+
+    [HttpGet("type_of_parking_system")]
+    public async Task<IActionResult> GetCarParkTypeOfSystem()
+    {
+
+        var carParks = await _context.CarParks.ToListAsync();
+
+        if (carParks == null || !carParks.Any())
+        {
+            return NotFound(new { message = "No car parks available." });
+        }
+
+        var groupedCarParks = carParks
+            .Where(cp => !string.IsNullOrEmpty(cp.type_of_parking_system)) // Avoid null grouping
+            .GroupBy(cp => cp.type_of_parking_system)
+            .Select(g => new
+            {
+                CarParkType = g.Key,
+                Count = g.Count()
+            })
+            .OrderBy(g => g.CarParkType)
+            .ToList();
+
+        return Ok(groupedCarParks);
     }
 
     // POST: api/CarPark

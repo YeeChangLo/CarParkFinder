@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CarParkFinder.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b1afefd8bf98a0e86dcc75fc204fbe7255b8413d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2d2657483d7a8668f09321e606102e4e96795028")]
 [assembly: System.Reflection.AssemblyProductAttribute("CarParkFinder.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CarParkFinder.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

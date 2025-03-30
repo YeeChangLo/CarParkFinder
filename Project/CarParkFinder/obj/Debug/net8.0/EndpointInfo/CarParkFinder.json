@@ -89,7 +89,7 @@
         }
       }
     },
-    "/api/CarPark/{car_park_no}": {
+    "/api/CarPark/car_park_no": {
       "get": {
         "tags": [
           "CarPark"
@@ -97,8 +97,7 @@
         "parameters": [
           {
             "name": "car_park_no",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "string"
             }
@@ -166,6 +165,51 @@
               "default": 10
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/available": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/address": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "parameters": [
+          {
+            "name": "address",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/type_of_parking_system": {
+      "get": {
+        "tags": [
+          "CarPark"
         ],
         "responses": {
           "200": {
@@ -256,10 +300,6 @@
       "CarParkAvailability": {
         "type": "object",
         "properties": {
-          "id": {
-            "type": "integer",
-            "format": "int32"
-          },
           "car_park_no": {
             "type": "string",
             "nullable": true

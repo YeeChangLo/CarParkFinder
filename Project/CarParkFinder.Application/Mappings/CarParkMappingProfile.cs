@@ -14,5 +14,8 @@ public class CarParkMappingProfile : Profile
 
         // Map CarPark → CarParkDto (Used for API Response)
         CreateMap<CarPark, CarParkDto>();
+
+        // Map CarParkAvailability → CarParkAvailabilityDto (Used for API Response)
+        CreateMap<CarParkAvailability, CarParkAvailabilityDto>();
     }
 }
