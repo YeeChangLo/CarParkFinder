@@ -47,8 +47,34 @@
   },
   {
     "ContainingType": "CarParkController",
+    "Method": "GetCarparkByAddress",
+    "RelativePath": "api/CarPark/address",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "address",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "GetAvailableCarparks",
+    "RelativePath": "api/CarPark/available",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
     "Method": "GetCarPark",
-    "RelativePath": "api/CarPark/{car_park_no}",
+    "RelativePath": "api/CarPark/car_park_no",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -56,7 +82,7 @@
       {
         "Name": "car_park_no",
         "Type": "System.String",
-        "IsRequired": true
+        "IsRequired": false
       }
     ],
     "ReturnTypes": [
@@ -100,6 +126,16 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "GetCarParkTypeOfSystem",
+    "RelativePath": "api/CarPark/type_of_parking_system",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
