@@ -5,6 +5,43 @@
     "version": "1.0"
   },
   "paths": {
+    "/api/auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "multipart/form-data": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Username": {
+                    "type": "string"
+                  },
+                  "Password": {
+                    "type": "string"
+                  }
+                }
+              },
+              "encoding": {
+                "Username": {
+                  "style": "form"
+                },
+                "Password": {
+                  "style": "form"
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CarPark": {
       "get": {
         "tags": [
@@ -127,6 +164,110 @@
         }
       }
     },
+    "/api/CarPark/address": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "parameters": [
+          {
+            "name": "address",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/car_park_type": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/type_of_parking_system": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/short_term_parking_period": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/free_parking_period": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/night_parking": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/CarPark/available": {
+      "get": {
+        "tags": [
+          "CarPark"
+        ],
+        "parameters": [
+          {
+            "name": "min",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 0
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/CarPark/nearest": {
       "get": {
         "tags": [
@@ -165,51 +306,6 @@
               "default": 10
             }
           }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/CarPark/available": {
-      "get": {
-        "tags": [
-          "CarPark"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/CarPark/address": {
-      "get": {
-        "tags": [
-          "CarPark"
-        ],
-        "parameters": [
-          {
-            "name": "address",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/CarPark/type_of_parking_system": {
-      "get": {
-        "tags": [
-          "CarPark"
         ],
         "responses": {
           "200": {

@@ -198,6 +198,7 @@ D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Azure.Core.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Azure.Identity.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Castle.Core.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\CsvHelper.dll
+D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Microsoft.Bcl.Cryptography.dll
 D:\LYC\Project\Project\CarParkFinder.Tests\bin\Debug\net8.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll

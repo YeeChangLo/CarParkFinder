@@ -1,5 +1,26 @@
 [
   {
+    "ContainingType": "AuthController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Username",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Password",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "CarParkController",
     "Method": "GetCarParks",
     "RelativePath": "api/CarPark",
@@ -68,7 +89,13 @@
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "min",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -99,6 +126,26 @@
   },
   {
     "ContainingType": "CarParkController",
+    "Method": "GetCarParkType",
+    "RelativePath": "api/CarPark/car_park_type",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "GetFreeParkingPeriod",
+    "RelativePath": "api/CarPark/free_parking_period",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
     "Method": "GetNearestCarParks",
     "RelativePath": "api/CarPark/nearest",
     "HttpMethod": "GET",
@@ -126,6 +173,26 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "GetNightParking",
+    "RelativePath": "api/CarPark/night_parking",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
+    "Method": "GetShortTermParkingPeriod",
+    "RelativePath": "api/CarPark/short_term_parking_period",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
