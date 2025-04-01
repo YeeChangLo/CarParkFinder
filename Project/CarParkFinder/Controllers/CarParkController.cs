@@ -37,7 +37,9 @@ public class CarParkController : ControllerBase
     public async Task<ActionResult<CarPark>> GetCarPark(string car_park_no)
     {
         var carPark = await _context.CarParks.FindAsync(car_park_no);
-        return carPark == null ? NotFound() : Ok(carPark);
+        var carParkDtos = _mapper.Map<CarParkDto>(carPark);
+
+        return carPark == null ? NotFound() : Ok(carParkDtos);
     }
 
     // GET: api/CarPark/address
@@ -275,15 +277,35 @@ public class CarParkController : ControllerBase
         if (carParkDto == null)
             return BadRequest("Invalid car park data.");
 
-        // Use AutoMapper to convert DTO → Entity
-        var carPark = _mapper.Map<CarPark>(carParkDto);
+        // Log received data for debugging
+        _logger.LogInformation("Received Car Park Data: {@carParkDto}", carParkDto);
 
+        // Convert DTO → Entity
+        var carPark = _mapper.Map<CarPark>(carParkDto);
         _context.CarParks.Add(carPark);
         await _context.SaveChangesAsync();
 
-        // Use AutoMapper to convert Entity → DTO Response
+        // Reload entity to get latest DB values
+        await _context.Entry(carPark).ReloadAsync();
+
+        // Convert Entity → DTO Response
         var response = _mapper.Map<CarParkResponseDto>(carPark);
 
-        return CreatedAtAction(nameof(GetCarPark), new { car_park_no = carPark.car_park_no }, response);
+        return CreatedAtAction(nameof(GetCarPark), new { car_park_no = carPark.car_park_no }, new { message = "Car park added successfully." });
     }
+
+    [HttpDelete("car_park_no")]
+    public async Task<IActionResult> DeleteCarPark([FromQuery] string car_park_no)
+    {
+        var carPark = await _context.CarParks.FindAsync(car_park_no);
+
+        if (carPark == null)
+            return NotFound(new { message = "Car park not found." });
+
+        _context.CarParks.Remove(carPark);
+        await _context.SaveChangesAsync();
+
+        return Ok(new { message = "Car park deleted successfully." });
+    }
+
 }
