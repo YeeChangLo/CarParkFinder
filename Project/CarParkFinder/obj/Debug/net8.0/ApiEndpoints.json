@@ -126,6 +126,22 @@
   },
   {
     "ContainingType": "CarParkController",
+    "Method": "DeleteCarPark",
+    "RelativePath": "api/CarPark/car_park_no",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "car_park_no",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CarParkController",
     "Method": "GetCarParkType",
     "RelativePath": "api/CarPark/car_park_type",
     "HttpMethod": "GET",

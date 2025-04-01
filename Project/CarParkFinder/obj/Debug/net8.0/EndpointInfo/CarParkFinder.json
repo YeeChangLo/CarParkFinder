@@ -162,6 +162,25 @@
             }
           }
         }
+      },
+      "delete": {
+        "tags": [
+          "CarPark"
+        ],
+        "parameters": [
+          {
+            "name": "car_park_no",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       }
     },
     "/api/CarPark/address": {

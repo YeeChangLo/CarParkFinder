@@ -5,6 +5,12 @@
     {
       "AbsoluteMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|d:\\lyc\\project\\project\\carparkfinder\\controllers\\carparkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7ADC9C3F-5290-480C-AA11-2783B86E655C}|CarParkFinder.csproj|solutionrelative:controllers\\carparkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC4AF92-9F79-4711-9FB3-D0648EBCA980}|..\\CarParkFinder.Application\\CarParkFinder.Application.csproj|d:\\lyc\\project\\project\\carparkfinder.application\\mappings\\carparkmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8AC4AF92-9F79-4711-9FB3-D0648EBCA980}|..\\CarParkFinder.Application\\CarParkFinder.Application.csproj|d:\\lyc\\project\\project\\carparkfinder.application\\helpers\\distancehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,9 +46,35 @@
               "RelativeDocumentMoniker": "Controllers\\CarParkController.cs",
               "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder\\Controllers\\CarParkController.cs",
               "RelativeToolTip": "Controllers\\CarParkController.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAQwBkAAAAYAAAAAAAAAA==",
+              "ViewState": "AgIAAAkBAAAAAAAAAAAcwBEBAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T04:33:01.871Z",
+              "WhenOpened": "2025-04-01T07:24:11.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CarParkMappingProfile.cs",
+              "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder.Application\\Mappings\\CarParkMappingProfile.cs",
+              "RelativeDocumentMoniker": "..\\CarParkFinder.Application\\Mappings\\CarParkMappingProfile.cs",
+              "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder.Application\\Mappings\\CarParkMappingProfile.cs",
+              "RelativeToolTip": "..\\CarParkFinder.Application\\Mappings\\CarParkMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T07:28:20.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DistanceHelper.cs",
+              "DocumentMoniker": "D:\\LYC\\Project\\Project\\CarParkFinder.Application\\Helpers\\DistanceHelper.cs",
+              "RelativeDocumentMoniker": "..\\CarParkFinder.Application\\Helpers\\DistanceHelper.cs",
+              "ToolTip": "D:\\LYC\\Project\\Project\\CarParkFinder.Application\\Helpers\\DistanceHelper.cs",
+              "RelativeToolTip": "..\\CarParkFinder.Application\\Helpers\\DistanceHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T06:56:55.09Z",
               "EditorCaption": ""
             }
           ]
